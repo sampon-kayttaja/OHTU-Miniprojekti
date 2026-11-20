@@ -3,6 +3,6 @@ Miniprojekti Ohjelmistotuotanto-kurssia varten.
 
 Tähän tulee linkki klusterille.
 
-Backlog: https://github.com/users/sampon-kayttaja/projects/1
+[Backlog](https://github.com/users/sampon-kayttaja/projects/1)
 
-[Pelisäännöt](./pelisaannot.md)!
+[Pelisäännöt](./pelisaannot.md)
