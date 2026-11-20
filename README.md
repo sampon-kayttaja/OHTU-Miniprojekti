@@ -6,3 +6,5 @@ Tähän tulee linkki klusterille.
 [Backlog](https://github.com/users/sampon-kayttaja/projects/1)
 
 [Pelisäännöt](./pelisaannot.md)
+
+[DoD](./dod..md)
