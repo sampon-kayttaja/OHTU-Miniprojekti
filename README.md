@@ -7,4 +7,4 @@ Tähän tulee linkki klusterille.
 
 [Pelisäännöt](./pelisaannot.md)
 
-[DoD](./dod..md)
+[DoD](./dod.md)
