@@ -12,3 +12,8 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+log.html
+output.xml
+playwright-log.txt
+report.html
