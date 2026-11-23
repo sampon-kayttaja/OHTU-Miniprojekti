@@ -15,12 +15,16 @@ jobs:
         with:
           python-version: "3.14"
           enable-cache: true
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: "22"
       - name: Install dependencies
         run: uv sync
       - name: Initialize Browser library
         run: uv run rfbrowser init --with-deps chromium
+      - name: Start app
+        run: |
+          uv run flask --app src/app.py run --port 5000 &
+          sleep 5
       - name: Run tests
         run: uv run robot --variable HEADLESS:true src/story_tests
