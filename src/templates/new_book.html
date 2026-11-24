@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block title %}Lisää lähde{% endblock %}
+{% block body %}
+<form action="/send_book" method="post">
+  <p>
+    <label for="author">Author</label>: <br />
+    <input type="text" name="author" id="author" maxlength="1000" required />
+  </p>
+  <p>
+    <label for="title">Title</label>: <br />
+    <input type="text" name="title" id="title" maxlength="1000" required />
+  </p>
+  <p>
+    <label for="year">Year</label>: <br />
+    <input type="text" name="year" id="year" size="8" pattern="[0-9]{4}" />
+  </p>
+  <p>
+    <label for="publisher">Publisher</label>: <br />
+    <input name="publisher" id="publisher" maxlength="1500" />
+  </p>
+  <input type="submit" value="Tallenna" />
+</form>
+{% endblock %}
