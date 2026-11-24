@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 
 app = Flask(__name__)
 
@@ -8,10 +8,15 @@ def index():
 
 @app.route("/new_book")
 def new_book():
-    return render_template("")
+    return render_template("new_book.html")
 
-@app.route("/send_book")
+@app.route("/send_book", methods=["POST"])
 def send_book():
+    author = request.form.get("author")
+    title = request.form.get("title")
+    year = request.form.get("year")
+    publisher = request.form.get("publisher")
+    # Save the data to a database
     return redirect("/")
 
 @app.route("/all_sources")
