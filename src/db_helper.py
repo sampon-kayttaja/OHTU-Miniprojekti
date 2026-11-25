@@ -5,7 +5,6 @@ from pathlib import Path
 
 from flask import current_app, g, has_app_context
 
-
 def get_connection():
     database_url = os.environ.get("DATABASE_URL", "sqlite:///data/database.db")
     if has_app_context():
@@ -17,7 +16,6 @@ def get_connection():
     con.execute("PRAGMA foreign_keys = ON")
     con.row_factory = sqlite3.Row
     return con
-
 
 def init_database():
     schema_path = Path(__file__).with_name("schema.sql")
@@ -33,19 +31,15 @@ def init_database():
         con.executescript(schema_path.read_text(encoding="utf-8"))
         con.commit()
 
-
-
 def execute(sql, params=()):
     with closing(get_connection()) as con:
         result = con.execute(sql, params)
         con.commit()
         g.last_insert_id = result.lastrowid
 
-
 def query(sql, params=()):
     with closing(get_connection()) as con:
         return con.execute(sql, params).fetchall()
-
 
 if __name__ == "__main__":
     init_database()
