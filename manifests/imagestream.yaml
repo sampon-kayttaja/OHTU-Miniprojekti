@@ -10,7 +10,7 @@ spec:
     - name: latest
       from:
         kind: DockerImage
-        name: source-image:latest
+        name: ghcr.io/sampon-kayttaja/ohtu-miniprojekti:latest
       importPolicy:
         scheduled: true
       referencePolicy:
