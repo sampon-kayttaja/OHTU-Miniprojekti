@@ -1,0 +1,15 @@
+.venv
+.git
+.github
+__pycache__
+*.pyc
+.env
+browser
+src/story_tests
+log.html
+output.xml
+report.html
+playwright-log.txt
+*.md
+*.db
+instance/

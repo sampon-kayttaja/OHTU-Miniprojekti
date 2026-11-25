@@ -22,3 +22,6 @@ def send_book():
 @app.route("/all_sources")
 def all_sources():
     return render_template("")
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5001, debug=True)
