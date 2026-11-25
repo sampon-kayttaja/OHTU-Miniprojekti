@@ -13,3 +13,4 @@ playwright-log.txt
 *.md
 *.db
 instance/
+data/
