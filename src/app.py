@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, request
-import db_helper
+
+from . import sources
 
 app = Flask(__name__)
 
@@ -18,11 +19,8 @@ def send_book():
     year = request.form.get("year")
     publisher = request.form.get("publisher")
 
-    db_helper.execute(
-        "INSERT INTO books (author, title, year, publisher) VALUES (?, ?, ?, ?)",
-        (author, title, year, publisher),
-    )
-    
+    sources.insert_book(author, title, year, publisher)
+
     return redirect("/")
 
 @app.route("/all_sources")
