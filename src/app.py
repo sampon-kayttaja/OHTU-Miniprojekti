@@ -26,8 +26,6 @@ def send_book():
 @app.route("/all_sources")
 def all_sources():
     books = sources.get_all_books()
-    if not books:
-        return render_template("all_sources.html", books=[])
     return render_template("all_sources.html", books=books)
 
 if __name__ == "__main__":
