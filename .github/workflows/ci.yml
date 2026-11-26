@@ -23,9 +23,7 @@ jobs:
       - name: Initialize Browser library
         run: uv run rfbrowser init --with-deps chromium
       - name: Init database
-        run: |
-          uv run python3 src/db_helper.py &
-          sleep 2
+        run: uv run python3 src/db_helper.py 
       - name: Start app
         run: |
           uv run flask --app src/app.py run --port 5000 &
