@@ -27,4 +27,4 @@ jobs:
           uv run flask --app src/app.py run --port 5000 &
           sleep 5
       - name: Run tests
-        run: uv run robot --variable HEADLESS:true src/story_tests
+        run: uv run robot src/story_tests
