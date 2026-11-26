@@ -5,6 +5,7 @@ Library  Browser
 ${SERVER}     127.0.0.1:5000
 ${DELAY}      500ms
 ${HOME_URL}   http://${SERVER}
+${NEW_BOOK_URL}  http://${SERVER}/new_book
 ${BROWSER}    chromium
 ${HEADLESS}   false
 
@@ -20,6 +21,9 @@ Open And Configure Browser
 
 Go To Home Page
     Go To  ${HOME_URL}
+
+Go To New Book Page
+    Go To  ${NEW_BOOK_URL}
 
 Title Should Be
     [Arguments]  ${expected_title}
