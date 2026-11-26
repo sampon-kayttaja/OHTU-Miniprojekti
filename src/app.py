@@ -27,8 +27,7 @@ def send_book():
 
 @app.route("/all_sources")
 def all_sources():
-    books = db_helper.query("SELECT * FROM books")
-    return render_template("all_sources.html", books=books)
+    return
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001)
