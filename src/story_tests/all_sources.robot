@@ -13,4 +13,3 @@ User Can List All Added Sources
     Get Text  h1  contains  Kaikki lähteet
     Get Text  body  contains  Tuhat loistavaa aurinkoa
     Get Text  body  contains  Sinuhe egyptiläinen
-    
