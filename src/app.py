@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, request
 
-from . import sources
+import sources
 
 app = Flask(__name__)
 
@@ -25,7 +25,12 @@ def send_book():
 
 @app.route("/all_sources")
 def all_sources():
-    return
+    books = sources.get_all_books()
+    
+    return redirect("/")
+    if not books:
+        return render_template("all_sources.html", books=[])
+    return render_template("all_sources.html", books=books)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001)

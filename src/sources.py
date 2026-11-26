@@ -6,3 +6,6 @@ def insert_book(author, title, year, publisher):
         "INSERT INTO books (author, title, year, publisher) VALUES (?, ?, ?, ?)",
         (author, title, year, publisher),
     )
+
+def get_all_books():
+    return db_helper.query("SELECT * FROM books")
