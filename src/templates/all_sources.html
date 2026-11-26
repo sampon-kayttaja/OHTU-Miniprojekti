@@ -4,10 +4,10 @@
 <h1>Kaikki lähteet</h1>
 
   {% for book in books %}
-  <p>Author: { book["author"] }<br />
-     Title: { book["title"] }<br />
-     {% if book["year"] != "" %}Year: { book["year"] }<br />{% endif %}
-     {% if book["publisher"] != ""%}Publisher: { book["publisher"] }{% endif %}
+  <p>Author: {{ book["author"] }}<br />
+     Title: {{ book["title"] }}<br />
+     {% if book["year"] != "" %}Year: {{ book["year"] }}<br />{% endif %}
+     {% if book["publisher"] != ""%}Publisher: {{ book["publisher"] }}{% endif %}
   </p>
   {% endfor %}
 {% endblock %}
